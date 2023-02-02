@@ -14,4 +14,8 @@ use App\Http\Controllers\BlogController;
 |
 */
 
+// show all blogs
 Route::get('/', [BlogController::class, 'index']);
+
+// show single blog
+Route::get('/blogs/{blog}', [BlogController::class, 'show']);

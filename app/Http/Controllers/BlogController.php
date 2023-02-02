@@ -12,4 +12,10 @@ class BlogController extends Controller
             'blogs' => Blog::latest()->paginate(3)
         ]);
     }
+
+    public function show(Blog $blog) {
+        return view('blogs.show', [
+            'blog' => $blog
+        ]);
+    }
 }

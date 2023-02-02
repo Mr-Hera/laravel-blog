@@ -18,6 +18,8 @@
                 extend: {
                     colors: {
                         bmw: '#0033A0',
+                        bsouth: '#0060A9',
+                        atlantic: '##9D2235',
                     }
                 }
             }
