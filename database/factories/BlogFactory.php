@@ -17,10 +17,10 @@ class BlogFactory extends Factory
     public function definition()
     {
         return [
-            'title' => $this->faker->sentence(),
-            'tags' => 'sedan, suv, sport, convertible',
-            'published' => $this->faker->dateTime(),
-            'description' => $this->faker->paragraph(6),
+            // 'title' => $this->faker->carModel('BMW'),
+            // 'tags' => 'sedan, suv, sport, convertible',
+            // 'published' => $this->faker->date('Y_m_d'),
+            // 'description' => $this->faker->paragraph(6),
         ];
     }
 }
