@@ -1,4 +1,7 @@
 <x-layout>
+    <a href="/" class="inline-block text-black ml-56 pt-10 pr-2 pl-28 mb-4">
+        <i class="fa-solid fa-arrow-left"></i> Back
+    </a>
     <div class="pb-40">
         <x-card class="p-10 max-w-lg mx-auto mt-24">
         <header class="text-center">
@@ -40,16 +43,16 @@
             @enderror
             </div>
     
-            {{-- <div class="mb-6">
+            <div class="mb-6">
             <label for="cover" class="inline-block text-lg mb-2">
-                Blog Cover
+                Cover Image
             </label>
             <input type="file" class="border border-gray-200 rounded p-2 w-full" name="cover" />
     
             @error('cover')
                 <p class="text-red-500 text-xs mt-1">{{$message}}</p>
             @enderror
-            </div> --}}
+            </div>
     
             <div class="mb-6">
             <label for="description" class="inline-block text-lg mb-2">

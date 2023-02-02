@@ -23,5 +23,11 @@ Route::get('/blogs/create', [BlogController::class, 'create']);
 // store blog data
 Route::post('/blogs', [BlogController::class, 'store']);
 
+// show edit blog form
+Route::get('/blogs/{blog}/edit', [BlogController::class, 'edit']);
+
+// update blog
+Route::put('/blogs/{blog}', [BlogController::class, 'update']);
+
 // show single blog
 Route::get('/blogs/{blog}', [BlogController::class, 'show']);

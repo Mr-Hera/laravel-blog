@@ -31,8 +31,35 @@ class BlogController extends Controller
             'description' => 'required',
         ]);
 
+        if($request->hasFile('cover')) {
+            $formData['cover'] = $request->file('cover')->store('covers', 'public');
+        }
+
         Blog::create($formData);
 
         return redirect('/')->with('message', 'Blog Created Successfully!');
+    }
+
+    public function edit(Blog $blog) {
+        return view('blogs.edit', [
+            'blog' => $blog
+        ]);
+    }
+
+    public function update(Request $request, Blog $blog) {
+        $formData = $request->validate([
+            'title' => 'required',
+            'tags' => 'required',
+            'published' => 'required',
+            'description' => 'required',
+        ]);
+
+        if($request->hasFile('cover')) {
+            $formData['cover'] = $request->file('cover')->store('covers', 'public');
+        }
+
+        $blog->update($formData);
+
+        return back()->with('message', 'Blog Updated Successfully!');
     }
 }
