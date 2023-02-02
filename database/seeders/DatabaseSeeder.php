@@ -101,6 +101,15 @@ class DatabaseSeeder extends Seeder
             (\'Gran Coupe\') body styles for later generations. An M6 model was built for each of the first three generations of the 6 Series. 
             Production of the M6 ended in 2018 and it was replaced by the BMW M8 (F91/F92/F93) in 2019.'
         ]);
+        Blog::create([
+            'title' => 'i8',
+            'tags' => 'electric',
+            'published' => '2022_08_08',
+            'description' => 'The BMW i8 is a plug-in hybrid sports car developed by BMW. The i8 was part of BMW\'s electrified fleet and was 
+            marketed under the BMW i sub-brand. The production version of the BMW i8 was unveiled at the 2013 Frankfurt Motor Show and was 
+            released in Germany in June 2014. Deliveries to retail customers in the U.S. began in August 2014. A roadster variant was launched 
+            in May 2018. Production ended in June 2020.'
+        ]);
 
         // Blog::factory(6)->create();
     }

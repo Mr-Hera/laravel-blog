@@ -14,4 +14,14 @@ use App\Http\Controllers\BlogController;
 |
 */
 
+// show all blogs
 Route::get('/', [BlogController::class, 'index']);
+
+// show create blog form
+Route::get('/blogs/create', [BlogController::class, 'create']);
+
+// store blog data
+Route::post('/blogs', [BlogController::class, 'store']);
+
+// show single blog
+Route::get('/blogs/{blog}', [BlogController::class, 'show']);
