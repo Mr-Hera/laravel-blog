@@ -13,6 +13,7 @@
         "laravel/tinker": "^2.7"
     },
     "require-dev": {
+        "avto-dev/faker-providers": "^3.2",
         "fakerphp/faker": "^1.9.1",
         "laravel/pint": "^1.0",
         "laravel/sail": "^1.0.1",

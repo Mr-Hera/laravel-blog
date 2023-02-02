@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "71e9ced4050b8c26c17b4ba38603f6bc",
+    "content-hash": "588288b0257886f89933601a2a4df087",
     "packages": [
         {
             "name": "brick/math",
@@ -5700,6 +5700,73 @@
         }
     ],
     "packages-dev": [
+        {
+            "name": "avto-dev/faker-providers",
+            "version": "v3.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/avto-dev/faker-providers.git",
+                "reference": "990f538a46e38e95415d36db0c6c7a9004730144"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/avto-dev/faker-providers/zipball/990f538a46e38e95415d36db0c6c7a9004730144",
+                "reference": "990f538a46e38e95415d36db0c6c7a9004730144",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "ext-mbstring": "*",
+                "fakerphp/faker": "~1.12",
+                "php": "^7.3 || ^8.0"
+            },
+            "require-dev": {
+                "avto-dev/extended-laravel-validator": "^3.0",
+                "avto-dev/identity-laravel": "^4.1 || ^5.0",
+                "laravel/laravel": "~6.0 || ~7.0 || ~8.0 || ~9.0",
+                "phpstan/phpstan": "~0.12.34",
+                "phpunit/phpunit": "^9.3"
+            },
+            "suggest": {
+                "avto-dev/identity-laravel": "[Laravel] Adds supports for a working with IDEntity package (^5.0)"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "AvtoDev\\FakerProviders\\Frameworks\\Laravel\\ServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "AvtoDev\\FakerProviders\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "avto-dev",
+                    "homepage": "https://github.com/avto-dev"
+                }
+            ],
+            "description": "Extended faker package providers",
+            "keywords": [
+                "extended",
+                "faker",
+                "laravel",
+                "providers",
+                "tests"
+            ],
+            "support": {
+                "issues": "https://github.com/avto-dev/faker-providers/issues",
+                "source": "https://github.com/avto-dev/faker-providers"
+            },
+            "time": "2022-07-12T07:34:26+00:00"
+        },
         {
             "name": "doctrine/instantiator",
             "version": "2.0.0",
