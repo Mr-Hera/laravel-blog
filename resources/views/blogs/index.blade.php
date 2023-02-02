@@ -12,4 +12,8 @@
             @endunless
         </div>
     </div>
+    {{-- pagination controls --}}
+    <div class="mt-28 mx-10 p-10">
+        {{ $blogs->links() }}
+    </div>
 </x-layout>
