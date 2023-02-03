@@ -35,6 +35,8 @@ class BlogController extends Controller
             $formData['cover'] = $request->file('cover')->store('covers', 'public');
         }
 
+        $formData['user_id'] = auth()->id();
+
         Blog::create($formData);
 
         return redirect('/')->with('message', 'Blog Created Successfully!');

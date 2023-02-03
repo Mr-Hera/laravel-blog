@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use App\Models\Blog;
+use App\Models\User;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -15,7 +16,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        \App\Models\User::factory(4)->create();
+        // \App\Models\User::factory(4)->create();
+        $user = User::factory()->create([
+            'name' => 'Mr Hera',
+            'email' => 'mrhera@gmail.com',
+        ]);
 
         // \App\Models\User::factory()->create([
         //     'name' => 'Test User',
@@ -23,6 +28,7 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         Blog::create([
+            'user_id' => $user->id,
             'title' => 'M1',
             'tags' => 'sport',
             'published' => '1982_01_06',
@@ -36,6 +42,7 @@ class DatabaseSeeder extends Seeder
             demanded BMW build 400 road cars to homologate it.'
         ]);
         Blog::create([
+            'user_id' => $user->id,
             'title' => 'M2',
             'tags' => 'sport',
             'published' => '1980_11_10',
@@ -54,6 +61,7 @@ class DatabaseSeeder extends Seeder
             M Coupé.'
         ]);
         Blog::create([
+            'user_id' => $user->id,
             'title' => 'M3',
             'tags' => 'sport',
             'published' => '2019_01_23',
@@ -70,6 +78,7 @@ class DatabaseSeeder extends Seeder
             and hammers the pavement with 543 horsepower and all-wheel drive.'
         ]);
         Blog::create([
+            'user_id' => $user->id,
             'title' => 'M4',
             'tags' => 'sport',
             'published' => '2000_11_05',
@@ -80,6 +89,7 @@ class DatabaseSeeder extends Seeder
             Motorsports division knows how.'
         ]);
         Blog::create([
+            'user_id' => $user->id,
             'title' => 'M5',
             'tags' => 'sport',
             'published' => '1997_07_17',
@@ -93,6 +103,7 @@ class DatabaseSeeder extends Seeder
             but its impressive comfort and refinement make it among the best in the premium sports sedan segment.'
         ]);
         Blog::create([
+            'user_id' => $user->id,
             'title' => 'M6',
             'tags' => 'sport',
             'published' => '1978_08_08',
@@ -102,6 +113,7 @@ class DatabaseSeeder extends Seeder
             Production of the M6 ended in 2018 and it was replaced by the BMW M8 (F91/F92/F93) in 2019.'
         ]);
         Blog::create([
+            'user_id' => $user->id,
             'title' => 'i8',
             'tags' => 'electric',
             'published' => '2022_08_08',
