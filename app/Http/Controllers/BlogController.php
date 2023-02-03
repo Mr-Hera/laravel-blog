@@ -49,6 +49,11 @@ class BlogController extends Controller
     }
 
     public function update(Request $request, Blog $blog) {
+        // verify ownership of logged in user
+        if($blog->user_id != auth()->id()) {
+            abort(403, 'Unauthorized Action!');
+        }
+
         $formData = $request->validate([
             'title' => 'required',
             'tags' => 'required',
@@ -66,7 +71,16 @@ class BlogController extends Controller
     }
 
     public function destroy(Blog $blog) {
+        // verify ownership of logged in user
+        if($blog->user_id != auth()->id()) {
+            abort(403, 'Unauthorized Action!');
+        }
+        
         $blog->delete();
         return redirect('/')->with('message', 'Blog Deleted Successfully!');
+    }
+
+    public function manage() {
+        return view('blogs.manage', ['blogs' => auth()->user()->blogs()->get()]);
     }
 }

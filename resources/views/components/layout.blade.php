@@ -37,7 +37,7 @@
             @auth
                 <li>
                     <span class="font-bold hover:text-bsouth">
-                        Welcome {{ auth()->user()->name }}
+                        <i class="fa fa-user-circle" aria-hidden="true"></i> {{ auth()->user()->name }}
                     </span>
                 </li>
                 <li>

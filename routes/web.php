@@ -33,6 +33,9 @@ Route::put('/blogs/{blog}', [BlogController::class, 'update'])->middleware('auth
 // delete blog
 Route::delete('/blogs/{blog}', [BlogController::class, 'destroy'])->middleware('auth');
 
+// manage blogs
+Route::get('/blogs/manage', [BlogController::class, 'manage'])->middleware('auth');
+
 // show single blog
 Route::get('/blogs/{blog}', [BlogController::class, 'show']);
 
