@@ -34,31 +34,38 @@
             <img src={{ asset("images/bmw_logo.png") }} alt="" class="ml-10 mt-4 w-24 logo" />
         </a>
         <ul class="flex space-x-6 mr-10 text-lg">
-            {{-- <li>
-                <a href="#" class="hover:text-bmw">
-                    <i class="fa-solid fa-gear"></i> Manage Blogs
-                </a>
-            </li>
-            <li>
-                <form method="POST" action="/logout" class="inline">
-                    @csrf
-                    <button type="submit">
-                        <i class="fa-solid fa-door-closed"> Logout</i>
-                    </button>
-                </form>
-            </li> --}}
+            @auth
+                <li>
+                    <span class="font-bold hover:text-bsouth">
+                        Welcome {{ auth()->user()->name }}
+                    </span>
+                </li>
+                <li>
+                    <a href="/blogs/manage" class="hover:text-bmw">
+                        <i class="fa-solid fa-gear"></i> Manage Blogs
+                    </a>
+                </li>
+                <li>
+                    <form method="POST" action="/logout" class="inline">
+                        @csrf
+                        <button type="submit" class="hover:text-red-700">
+                            <i class="fa-solid fa-door-closed"></i> Logout
+                        </button>
+                    </form>
+                </li>
+            @else
 
-
-            <li>
-                <a href="/register" class="hover:text-bmw">
-                    <i class="fa-solid fa-user-plus"></i> Register
-                </a>
-            </li>
-            <li>
-                <a href="/login" class="hover:text-bmw">
-                    <i class="fa-solid fa-arrow-right-to-bracket"></i> Login
-                </a>
-            </li>
+                <li>
+                    <a href="/register" class="hover:text-bmw">
+                        <i class="fa-solid fa-user-plus"></i> Register
+                    </a>
+                </li>
+                <li>
+                    <a href="/login" class="hover:text-bmw">
+                        <i class="fa-solid fa-arrow-right-to-bracket"></i> Login
+                    </a>
+                </li>
+            @endauth
         </ul>
     </nav>
     <x-flash-message />

@@ -50,16 +50,16 @@
                     @enderror
                 </div>
         
-                <div class="mb-6">
-                    <button type="submit" class="bg-laravel text-white rounded py-2 px-4 hover:bg-black">
+                <div class="flex justify-center mb-6">
+                    <button type="submit" class="bg-black text-white py-2 px-4 hover:bg-bmw">
                         Sign Up
                     </button>
                 </div>
         
-                <div class="mt-8">
+                <div class="flex justify-center mt-8">
                     <p>
                         Already have an account?
-                        <a href="/login" class="text-laravel">Login</a>
+                        <a href="/login" class="text-bmw">Login</a>
                     </p>
                 </div>
             </form>
