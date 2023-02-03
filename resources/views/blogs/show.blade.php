@@ -20,7 +20,10 @@
             </p>
         </div>
         <div>
-            {{ $blog->cover }}
+
+        <img class="h-96"
+        src="{{$blog->cover ? asset('storage/' . $blog->cover) : asset('/images/no-image.png')}}" alt="" />
+
         </div>
         <p class="flex justify-center mx-64 pb-1 mx-w-sm text-2xl text-center md:text-left">
             {{ $blog->description }}

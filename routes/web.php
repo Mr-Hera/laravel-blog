@@ -34,13 +34,13 @@ Route::put('/blogs/{blog}', [BlogController::class, 'update'])->middleware('auth
 Route::delete('/blogs/{blog}', [BlogController::class, 'destroy'])->middleware('auth');
 
 // show single blog
-Route::get('/blogs/{blog}', [BlogController::class, 'show'])->middleware('guest');
+Route::get('/blogs/{blog}', [BlogController::class, 'show']);
 
 // show registration form
 Route::get('/register', [UserController::class, 'create'])->middleware('guest');
 
 // create new user
-Route::post('/users', [UserController::class, 'store'])->middleware('guest');
+Route::post('/users', [UserController::class, 'store']);
 
 // logout user
 Route::post('/logout', [UserController::class, 'logout'])->middleware('auth');
