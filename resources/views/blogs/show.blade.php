@@ -19,6 +19,9 @@
                 {{ $blog->published }}
             </p>
         </div>
+        <div>
+            {{ $blog->cover }}
+        </div>
         <p class="flex justify-center mx-64 pb-1 mx-w-sm text-2xl text-center md:text-left">
             {{ $blog->description }}
         </p>
