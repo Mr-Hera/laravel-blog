@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,5 +30,14 @@ Route::get('/blogs/{blog}/edit', [BlogController::class, 'edit']);
 // update blog
 Route::put('/blogs/{blog}', [BlogController::class, 'update']);
 
+// delete blog
+Route::delete('/blogs/{blog}', [BlogController::class, 'destroy']);
+
 // show single blog
 Route::get('/blogs/{blog}', [BlogController::class, 'show']);
+
+// show registration form
+Route::get('/register', [UserController::class, 'create']);
+
+// create new user
+Route::post('/users', [UserController::class, 'store']);
