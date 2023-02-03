@@ -1,3 +1,27 @@
+## PROJECT TITLE - BMW-BLOGS
+
+## PROJECT DESCRIPTION 
+Simple laravel blog application that satisfies the following deliverables:
+    1. You should develop a simple Laravel Blog
+    2. It should be backed by a SQL database, SQL Lite is sufficient
+    3. Create a User model with authentication functionality;
+    As a User, I should be able to login
+    As a User, I should be able to register
+    4. Create a Post model, containing at minimum; title and content properties
+    5. Implement CRUD functions for the Post model
+    6. Create the necessary functions and pages/ui for each CRUD operation, ensuring that
+    certain behaviors require authentication/authorization :
+    Posts list page
+    Post detail page
+    Create Post page (requires authentication)
+    Delete Post button/action (requires authentication)
+    Edit Post page (requires authentication)
+    7. You should create a database seeder that will seed the database with at least one Post
+    and one User
+## N/B
+php -v => 8.1.4
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
